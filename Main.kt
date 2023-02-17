@@ -1,28 +1,26 @@
 fun main() {
-    println("Hello World!")
-    val titular: String = "Daniel"
-    val numConta: Int = 100
-    var saldo = 0.0
 
-    saldo = 100 + 2.0
-    saldo += 200
+    val titular: String = "Daniel"
+    val numConta: Int = 1000
+    var saldo = 10.0
+
+    for (i in 10 downTo 1) {
+        saldo -= i
+    }
 
     println("titular $titular")
     println("numero da conta $numConta")
     println("Saldo da conta $saldo")
+    println()
+    testaCondicoes(saldo)
+}
 
-    if (saldo >= 0.0) {
-        println("Conta com saldo positivo ou igual a zero")
-    } else {
-        println("Conta NEGATIVA")
-    }
-
-
+fun testaCondicoes(saldo: Double) {
     when {
-        saldo > 0.0 -> println("conta é Positiva")
-        saldo == 0.0 -> println("Conta Zerada")
-        else -> println("Conta Negativa")
+        saldo > 0.0 -> println("conta é Positiva, SALDO: $saldo")
+        saldo == 0.0 -> println("Conta Zerada, SALDO: $saldo")
+        else -> println("Conta Negativa, SALDO: $saldo")
     }
+}
 
-    
-    }
+
